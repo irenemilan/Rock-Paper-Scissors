@@ -4,9 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title><link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg">
+    <div class="pre-game">
+        <h1>Rock Paper Scissors</h1>
+        <img src="images/rock-paper-scissors.gif" alt="Rock Paper Scissors">
+        <div>
+            Are you ready? Choose win target:
+            <div class="round-selector">
+                <button data-value="3">3</button>
+                <button data-value="5">5</button>
+                <button data-value="10">10</button>
+            </div>
+        </div>
+        <p>Made by <a href="https://github.com/irenemilan/Rock-Paper-Scissors">Irene</a></p>
+    </div>
+    <div class="game">
+        <div class="game-score">
+            <div id="round">Round:<div id="round-num">1</div></div>
+        </div>
+        <div class="scoreboard">
+            <h2>Scoreboard:</h2>
+            <div class="score">
+                <div>Player: <spam id="player-score">0</spam></div>
+                <div>Computer: <spam id="comp-score">0</spam></div>
+            </div>
+        </div>
+        <div class="moves">
+            <div class="stats">
+                <div class="player-stats">
+                    <div class="player-rock">
+                        <p>Player</p>
+                        <img src="images/Rock.png" alt="Rock">
+                    </div>
+                    <div class="player-paper">
+                        <p>Player</p>
+                        <img src="images/Paper.png" alt="Paper">
+                    </div>
+                    <div class="player-scissors">
+                        <p>Player</p>
+                        <img src="images/Scissors.png" alt="Scissors">
+                    </div>
+                </div>
+                <img class="celebration" src="images/won-celebration.gif">
+                <img class="lose-game" src="images/lost.gif">
+                <div class="comp-stats">
+                    <div class="comp-rock">
+                        <p>Computer</p>
+                        <img src="images/Rock.png" alt="Rock">
+                    </div>
+                    <div class="comp-paper">
+                        <p>Computer</p>
+                        <img src="images/Paper.png" alt="Paper">
+                    </div>
+                    <div class="comp-scissors">
+                        <p>Computer</p>
+                        <img src="images/Scissors.png" alt="Scissors">
+                    </div>
+                </div>
+            </div>
+            <div class="game-score">
+                <p id="outcome"></p>
+                <p id="text"></p>
+            </div>
+            <div class="controls">
+                <div class="move-buttons">
+                    <button data-value="0" class="rock"></button>
+                    <button data-value="1" class="paper"></button>
+                    <button data-value="2" class="scissors"></button>
+                </div>
+                <div class="replay">
+                    <button id="play-again">Play Again?</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="javascript.js"></script>
 </body>
 </html>
